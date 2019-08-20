@@ -1,51 +1,24 @@
 'use strict';
 
+let money = prompt('Ваш бюджет на месяц?', '');
 
-var number = 3;
-var string = 'Hello!';
-var sym = Symbol();
-var boolean = true;
-null;
-undefined;
-var obj = {};
+let time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
-console.log(4 / 0);
-console.log('Qwerty' / 9);
-
-let assdf;
-console.log(assdf);
-
-let persone = {
-    name: 'John',
-    age: 25,
-    isMarried: false,
+let appData = {
+    budget: money,
+    timeData: time,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    savings: false
 };
 
-console.log(persone.name);
-console.log(persone['name']);
+let expenses1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    expensesCost1 = prompt('Во сколько обойдется?', ''),
+    expenses2 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    expensesCost2 = prompt('Во сколько обойдется?', '');
 
-let arr = [13, 25, 34, 47];
-console.log(arr[3]);
+appData.expenses.expenses1 = expensesCost1;
+appData.expenses.expenses2 = expensesCost2;
 
-// alert('Hello, world!');
-// let answer = confirm('Are you herr?');
-// console.log(answer);
-
-// let answer = +prompt('18?', 'Yes' );
-// console.log(typeof(answer));
-
-let incr = 10,
-    decr = 10;
-
-incr++;
-decr--;
-
-console.log(incr++);
-console.log(--decr);
-
-let isChecked = false,
-    isClose = false;
-
-console.log(isChecked && isClose);
-console.log(isChecked || isClose);
-console.log(isChecked || !isClose);
+alert(money / 30);
