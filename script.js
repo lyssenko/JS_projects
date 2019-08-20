@@ -37,8 +37,8 @@ console.log(arr[3]);
 let incr = 10,
     decr = 10;
 
-// incr++;
-// decr--;
+incr++;
+decr--;
 
 console.log(incr++);
 console.log(--decr);
